@@ -1,0 +1,21 @@
+[package]
+name = "frxos2"
+version = "0.1.0"
+authors = ["Fredrik Østrem <frx.apps@gmail.com>"]
+edition = "2018"
+
+[workspace]
+members = [
+]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies]
+bootloader = "0.6.1"
+spin = "0.5.0"
+lazy_static = { version = "1.3.0", features = [ "spin_no_std" ] }
+volatile = "0.2.6"
